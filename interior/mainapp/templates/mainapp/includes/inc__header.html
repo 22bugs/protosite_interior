@@ -1,0 +1,11 @@
+{% load static %}
+
+<header class="header">
+    <a href="{% url 'index' %}" class="header-logo">
+        <img src="{% static 'img/interior.png' %}" alt="Interior" height="22px">
+    </a>
+
+    <nav class="header-nav">
+        {% include 'mainapp/includes/inc__header-nav.html' %}
+    </nav>
+</header>
