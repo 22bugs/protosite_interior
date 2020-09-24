@@ -1,0 +1,62 @@
+@mixin bold-36 {
+    font: {
+        family: montserrat_bold;
+        size: 36px;
+    }
+}
+
+@mixin bold-22 {
+    font: {
+        family: montserrat_bold;
+        size: 22px;
+    }
+}
+
+@mixin bold-18 {
+    font: {
+        family: montserrat_bold;
+        size: 18px;
+    }
+}
+
+@mixin bold-16 {
+    font: {
+        family: montserrat_bold;
+        size: 16px;
+    }
+}
+
+@mixin bold-14 {
+    font: {
+        family: montserrat_bold;
+        size: 14px;
+    }
+}
+
+@mixin bold-12 {
+    font: {
+        family: montserrat_bold;
+        size: 12px;
+    }
+}
+
+@mixin light-22 {
+    font: {
+        family: montserrat_light;
+        size: 22px;
+    }
+}
+
+@mixin light-14 {
+    font: {
+        family: montserrat_light;
+        size: 14px;
+    }
+}
+
+@mixin thin-62 {
+    font: {
+        family: montserrat_thin;
+        size: 62px;
+    }
+}

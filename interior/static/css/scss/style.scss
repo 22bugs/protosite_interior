@@ -1,0 +1,39 @@
+@import "_indicators";
+@import "_fonts";
+
+@import "_header";
+@import "_headblock";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: $size-block;
+    margin: 0 auto;
+    color: $color-explicit;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: montserrat_bold;
+    src: url(../fonts/montserrat/montserrat-bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat_light;
+    src: url(../fonts/montserrat/montserrat-light.ttf);
+}
+
+@font-face {
+    font-family: montserrat_thin;
+    src: url(../fonts/montserrat/montserrat-thin.ttf);
+}
