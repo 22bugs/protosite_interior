@@ -1,14 +1,14 @@
 [
     {
-        "href": "index",
-        "name": "home"
+        "name": "home",
+        "href": "index"
     },
     {
-        "href": "products",
-        "name": "products"
+        "name": "products",
+        "href": "products"
     },
     {
-        "href": "contact",
-        "name": "contact"
+        "name": "contact",
+        "href": "contact"
     }
 ]

@@ -1,6 +1,6 @@
 {% for page in navigation %}
-    <a href="{% url ''|add:page.href %}" class="header-nav-page" 
-            {% if request.resolver_match.url_name == page.href %}
+    <a href="{% url 'main:'|add:page.href %}" class="header-nav-page" 
+            {% if request.resolver_match.url_name == page.href or page.href in request.path %} {% comment %} позволяет навигации оставаться активной {% endcomment %}
                 activ='true'
             {% else %}
                 activ='false'

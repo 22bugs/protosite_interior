@@ -1,0 +1,21 @@
+<div class="categories">
+    <a href="{% url 'main:products' %}" class="categories-link"
+        {% if request.path == '/products/' %}
+            activ='true'
+        {% else %}
+            activ='false'
+        {% endif %}>
+        all
+    </a>
+    
+    {% for link in categories %}
+        <a href="{% url 'main:category' link.name %}" class="categories-link"
+            {% if link.name in request.path %}
+                activ='true'
+            {% else %}
+                activ='false'
+            {% endif %}>
+            {{ link.name }}
+        </a>
+    {% endfor %}
+</div>

@@ -40,8 +40,8 @@
   font-size: 14px;
   color: #6c6c6c;
   text-transform: uppercase;
-  -webkit-transition: 500ms;
-  transition: 500ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 .header-nav-page:hover {
@@ -123,8 +123,8 @@
 }
 
 .header-nav-container-app:hover {
-  -webkit-animation: swing 500ms;
-          animation: swing 500ms;
+  -webkit-animation: swing 300ms;
+          animation: swing 300ms;
 }
 
 .headblock {
@@ -148,6 +148,38 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1170px;
+  padding: 50px 0;
+}
+
+.categories-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 3px 0;
+  padding: 10px 12px;
+  font-family: montserrat_bold;
+  font-size: 18px;
+  color: #6c6c6c;
+  text-transform: uppercase;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.categories-link:hover {
+  color: #212121;
+}
+
+.categories-link[activ='true'] {
+  margin: 0;
+  border-bottom: 3px solid #212121;
+  color: #212121;
 }
 
 * {

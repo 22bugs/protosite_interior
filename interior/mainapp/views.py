@@ -1,14 +1,13 @@
 import os
 import json
-
 from django.conf import settings
 from django.shortcuts import render
 
+from mainapp.models import ProductCategory, Product
+
 # Create your views here.
 
-with open(os.path.join(settings.BASE_DIR, 'json/nav-pages.json'),
-        'r',
-        encoding='utf-8') as open_nav:
+with open(os.path.join(settings.JSON_ROOT, 'nav-pages.json'), 'r', encoding='utf-8') as open_nav:
     load_nav = json.load(open_nav)
 
 def index(request):
@@ -19,12 +18,14 @@ def index(request):
     }
     return render(request, 'mainapp/index.html', context)
 
-def products(request):
+def products(request, category=None):
+    cats_set = ProductCategory.objects.all()
     context = {
         'page_name': 'products',
         'head_name': 'our products range',
 
         'navigation': load_nav,
+        'categories': cats_set,
     }
     return render(request, 'mainapp/products.html', context)
 
