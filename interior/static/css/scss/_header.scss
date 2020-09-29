@@ -1,0 +1,67 @@
+.header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: $size-content;
+    padding: 65px 0 30px;
+
+    &-logo {
+        user-select: none;
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        user-select: none;
+
+        &-page {
+            display: flex;
+            margin: 0 0 3px 0;
+            padding: 10px 12px;
+            @include bold-14;
+            color: $color-implicit;
+            text-transform: uppercase;
+            transition: $time-hover;
+
+            &:hover {
+                color: $color-alternative;
+            }
+
+            &[activ='true'] {
+                margin: 0;
+                border-bottom: 3px solid $color-explicit;
+                color: $color-explicit;
+
+                &:hover {
+                    border-bottom: 3px solid $color-alternative;
+                    color: $color-alternative;
+                }
+            }
+        }
+
+        &-container {
+            display: flex;
+            margin: 0 15px;
+
+            @keyframes swing {
+                0% {transform:rotate(0deg);}
+                25% {transform:rotate(-15deg);}
+                50% {transform:rotate(0deg);}
+                75% {transform:rotate(15deg);}
+                100% {transform: rotate(0deg);}
+            }
+    
+            &-app {
+                display: flex;
+                width: 28px;
+                height: 28px;
+                margin: 0 15px;
+                fill: $color-explicit;
+    
+                &:hover {
+                    animation: swing $time-hover;
+                }
+            }
+        }
+    }
+}

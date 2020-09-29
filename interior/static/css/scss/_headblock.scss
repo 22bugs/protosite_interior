@@ -1,0 +1,14 @@
+.headblock {
+    display: flex;
+    align-items: flex-end;
+    width: $size-content;
+    height: 300px;
+    padding: 0 98px 60px;
+    background: $color-back;
+
+    &>span {
+        @include thin-62;
+        color: $color-explicit;
+        user-select: none;
+    }
+}
