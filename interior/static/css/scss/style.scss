@@ -1,0 +1,73 @@
+@import "_indicators";
+@import "_fonts";
+
+@import "_header";
+@import "_headblock";
+@import "_submenu-0";
+@import "_locations";
+@import "_footer";
+@import "_userform";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: $size-block;
+    margin: 0 auto;
+    color: $color-explicit;
+}
+
+a {
+    text-decoration: none;
+    user-select: none;
+}
+
+.button {
+    position: relative;
+    height: 46px;
+    margin: 0 0 2px 0;
+    padding: 0 30px;
+    border: none;
+    border-radius: 23px;
+    box-shadow: 0 2px 5px 0 $color-neutral;
+    @include bold-18;
+    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    color: $color-explicit;
+    background: white;
+    transition: all $time-hover ease;
+
+    &:hover {
+        margin: 2px 0 0 0;
+        box-shadow: none;
+        background: $color-alternative;
+        cursor: pointer;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+@font-face {
+    font-family: montserrat_bold;
+    src: url(../fonts/montserrat/montserrat-bold.ttf);
+}
+
+@font-face {
+    font-family: montserrat_light;
+    src: url(../fonts/montserrat/montserrat-light.ttf);
+}
+
+@font-face {
+    font-family: montserrat_thin;
+    src: url(../fonts/montserrat/montserrat-thin.ttf);
+}
