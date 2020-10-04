@@ -1,4 +1,4 @@
-.categories {
+.submenu-0 {
     display: flex;
     width: $size-content;
     padding: 50px 0;
@@ -6,7 +6,7 @@
     &-link {
         display: flex;
         margin: 0 0 3px 0;
-        padding: 10px 12px;
+        padding: 10px 18px;
         @include bold-18;
         color: $color-implicit;
         text-transform: uppercase;

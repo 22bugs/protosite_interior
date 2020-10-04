@@ -5,14 +5,9 @@
     width: $size-content;
     padding: 65px 0 30px;
 
-    &-logo {
-        user-select: none;
-    }
-
     &-nav {
         display: flex;
         align-items: center;
-        user-select: none;
 
         &-page {
             display: flex;
@@ -39,7 +34,7 @@
             }
         }
 
-        &-container {
+        &-appblock {
             display: flex;
             margin: 0 15px;
 

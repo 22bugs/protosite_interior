@@ -8,7 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Interior {{ page_name|title }}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/interior_title.gif' %}">
+    <link rel="stylesheet" type="" href="{% static 'css/style.css' %}">
 
     {% block js %}
     {% endblock %}
@@ -23,6 +24,7 @@
         {% endblock %}
 
         {% block footer %}
+            {% include 'mainapp/includes/inc__footer.html' %}
         {% endblock %}
     </div>
 </body>

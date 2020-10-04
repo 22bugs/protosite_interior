@@ -1,5 +1,5 @@
-<div class="categories">
-    <a href="{% url 'main:products' %}" class="categories-link"
+<div class="submenu-0">
+    <a href="{% url 'main:products' %}" class="submenu-0-link"
         {% if request.path == '/products/' %}
             activ='true'
         {% else %}
@@ -9,7 +9,7 @@
     </a>
     
     {% for link in categories %}
-        <a href="{% url 'main:category' link.name %}" class="categories-link"
+        <a href="{% url 'main:category' link.name %}" class="submenu-0-link"
             {% if link.name in request.path %}
                 activ='true'
             {% else %}

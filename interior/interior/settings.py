@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp.apps.MainappConfig',
+    'authapp.apps.AuthappConfig',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'interior.wsgi.application'
+
+
+AUTH_USER_MODEL = 'authapp.ShopUser'
 
 
 # Database
@@ -127,7 +131,7 @@ STATICFILES_DIRS = (
 
 # Path to json
 
-JSON_ROOT = os.path.join(BASE_DIR, 'json')
+JSON_MAIN = os.path.join(BASE_DIR, 'mainapp/json')
 
 
 # Path to media
