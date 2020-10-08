@@ -1,0 +1,21 @@
+<div class="submenu">
+    <a href="{% url 'main:products' %}" class="submenu-link"
+        {% if request.path == '/products/' %}
+            activ='true'
+        {% else %}
+            activ='false'
+        {% endif %}>
+        all
+    </a>
+    
+    {% for link in categories %}
+        <a href="{% url 'main:category' link.pk %}" class="submenu-link"
+            {% if link.pk|slugify in request.path %}
+                activ='true'
+            {% else %}
+                activ='false'
+            {% endif %}>
+            {{ link.name }}
+        </a>
+    {% endfor %}
+</div>
