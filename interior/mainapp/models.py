@@ -1,6 +1,6 @@
 from django.db import models
-
 from django.core.validators import RegexValidator
+
 
 # Create your models here.
 
@@ -22,8 +22,8 @@ class Product(models.Model):
     short_description = models.CharField(verbose_name='short desc.', blank=True, max_length=64)
     image = models.ImageField(upload_to='img_products', blank=True)
     price = models.DecimalField(verbose_name='price', max_digits=8, decimal_places=2, default=0) # 8 разрядов из которых 2 десятичных
-    quantity = models.PositiveIntegerField('quantity', default=0)
-    status = models.CharField('status', max_length=32, blank=True)
+    quantity = models.PositiveIntegerField(verbose_name='quantity', default=0)
+    status = models.CharField(verbose_name='status', max_length=32, blank=True)
 
     def __str__(self):
         return f'{self.name} --- {self.category.name}'

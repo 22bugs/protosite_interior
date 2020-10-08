@@ -3,10 +3,11 @@
 
 @import "_header";
 @import "_headblock";
-@import "_submenu-0";
-@import "_locations";
-@import "_footer";
+@import "_submenu";
+@import "_prodblock-3";
+@import "_location-3";
 @import "_userform";
+@import "_footer";
 
 * {
     margin: 0;
@@ -27,6 +28,13 @@
 a {
     text-decoration: none;
     user-select: none;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    width: calc($size-content + 30px);
 }
 
 .button {

@@ -4,7 +4,7 @@
 		"phone_number": "775 - 337 - 4600",
 		"email": "info@interior.com",
 		"address": "Flossmoor St, 4300 Las Vegas",
-		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34860.73724457022!2d-115.07923217125035!3d36.24670772287855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8dd5b6330a593%3A0x40008527831d3e81!2s4300%20Flossmoor%20St%2C%20Las%20Vegas%2C%20NV%2089115%2C%20USA!5e0!3m2!1sen!2sru!4v1601583105654!5m2!1sen!2sru' class='locations-info-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
+		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34860.73724457022!2d-115.07923217125035!3d36.24670772287855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8dd5b6330a593%3A0x40008527831d3e81!2s4300%20Flossmoor%20St%2C%20Las%20Vegas%2C%20NV%2089115%2C%20USA!5e0!3m2!1sen!2sru!4v1601583105654!5m2!1sen!2sru' class='location-3-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
 		
 	},
 	{
@@ -12,13 +12,13 @@
 		"phone_number": "1900 - 1234 - 5678",
 		"email": "info@interior.com",
 		"address": "12 Wilson Ave, 90001 Los Angeles",
-		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28862.479864003584!2d-118.25588933284338!3d33.982865946215554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c91a7bd92ff9%3A0x9539eaf19543bafd!2sWilson%20Ave%2C%20Los%20Angeles%2C%20CA%2090001%2C%20USA!5e0!3m2!1sen!2sru!4v1601583376771!5m2!1sen!2sru' class='locations-info-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
+		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28862.479864003584!2d-118.25588933284338!3d33.982865946215554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c91a7bd92ff9%3A0x9539eaf19543bafd!2sWilson%20Ave%2C%20Los%20Angeles%2C%20CA%2090001%2C%20USA!5e0!3m2!1sen!2sru!4v1601583376771!5m2!1sen!2sru' class='location-3-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
 	},
 	{
 		"place": "arizona",
 		"phone_number": "520 - 742 - 2337",
 		"email": "info@interior.com",
 		"address": "North Oracle Road, 7881 Tucson",
-		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29405.173017437173!2d-110.9878079670703!3d32.34990745103218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d6734af0bd6ac1%3A0xa40ddcd2de139a04!2s7881%20N%20Oracle%20Rd%2C%20Oro%20Valley%2C%20AZ%2085704%2C%20USA!5e0!3m2!1sen!2sru!4v1601583480085!5m2!1sen!2sru' class='locations-info-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
+		"mapcode": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29405.173017437173!2d-110.9878079670703!3d32.34990745103218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86d6734af0bd6ac1%3A0xa40ddcd2de139a04!2s7881%20N%20Oracle%20Rd%2C%20Oro%20Valley%2C%20AZ%2085704%2C%20USA!5e0!3m2!1sen!2sru!4v1601583480085!5m2!1sen!2sru' class='location-3-map' frameborder='0' style='border:0;' allowfullscreen='' aria-hidden='false' tabindex='0'></iframe>"
 	}
 ]

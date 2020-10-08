@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.http import HttpResponseRedirect
 
 from django.contrib import auth
 from authapp.models import ShopUser
@@ -27,9 +27,11 @@ def login(request):
     }
     return render(request, 'authapp/login.html', context)
 
+
 def logout(request):
     auth.logout(request)
     return HttpResponseRedirect(reverse('main:index'))
+
 
 def register(request):
     register_form = ShopUserRegisterForm(request.POST, request.FILES)
@@ -46,6 +48,7 @@ def register(request):
         'register_form': register_form,
     }
     return render(request, 'authapp/register.html', context)
+
 
 def edit(request):
     edit_form = ShopUserEditForm(request.POST, request.FILES, instance=request.user)
