@@ -1,0 +1,63 @@
+.userform {
+    display: flex;
+    width: $size-form;
+    margin: 0 auto;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 0 20px 0 $color-neutral;
+
+    &>a {
+        position: absolute;
+        margin: 0 98px;
+        top: 100px;
+    }
+
+    &-headblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: $size-form / 2 - 98px * 2;
+        min-height: 300px;
+        padding: 0 98px 60px;
+        border-bottom-left-radius: 30px;
+        background: $color-back;
+
+        &>span {
+            @include thin-62;
+            color: $color-explicit;
+            user-select: none;
+        }
+    }
+
+    &-formblock {
+        padding: 60px 98px;
+
+        &-field {
+            width: 400px;
+            height: 50px;
+            padding: 0 19.5px;
+            @include light-14;
+            background: white;
+            border: 0.5px solid $color-neutral;
+        }
+
+        &>p {
+            margin: 0 0 20px;
+
+            &:nth-last-child(2) {
+                margin: 0 0 50px;
+            }
+
+            &>label {
+                display: none;
+            }
+        }
+
+        .errorlist,
+        .helptext,
+        &>ul {
+            display: none;
+        }
+    }
+}

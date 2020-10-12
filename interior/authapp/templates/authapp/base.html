@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interior {{ page_name|title }}</title>
+    <link rel="icon" href="{% static 'img/interior_title.gif' %}">
+    <link rel="stylesheet" type="" href="{% static 'css/style.css' %}">
+
+    {% block js %}
+    {% endblock %}
+</head>
+
+<body>
+    <div class="userform">
+        <a href="{% url 'main:index' %}">
+            <img src="{% static 'img/interior_logo.png' %}" alt="Interior" height="35px">
+        </a>
+        
+        <div class="userform-headblock">
+            <span>{{ page_name|title }}</span>
+        </div>
+
+        {% block main %}
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+[
+	{
+		"password" : "pbkdf2_sha256$150000$CWFTqwlECo8S$\/ecfAH+b5vLauPpPz\/H\/UD24uEqn9gVUIA1r0HcvqpA=",
+		"is_superuser" : 1,
+		"username" : "django",
+		"first_name" : "",
+		"last_name" : "",
+		"email" : "info@interior.com",
+		"is_staff" : 1,
+		"is_active" : 1,
+		"avatar" : "img_users\/admin.jpg"
+	},
+	{
+		"password" : "pbkdf2_sha256$150000$YiRC2fkK5QUH$ex+5Gms5pGgFn+CXfgwBJyxb11AAX\/Xc+uK5+1HtzbE=",
+		"is_superuser" : 0,
+		"username" : "loser_user",
+		"first_name" : "Loser",
+		"last_name" : "User",
+		"email" : "loser@user.com",
+		"is_staff" : 0,
+		"is_active" : 1,
+		"avatar" : ""
+	},
+	{
+		"password" : "pbkdf2_sha256$150000$EvFzjIUYnJA2$lyF\/mPyIPErj69MO1WmggFG4g2V1PPBpLiEMiapu0iY=",
+		"is_superuser" : 0,
+		"username" : "monty_python",
+		"first_name" : "Monty",
+		"last_name" : "Python",
+		"email" : "monty@python.com",
+		"is_staff" : 0,
+		"is_active" : 1,
+		"avatar" : ""
+	}
+]

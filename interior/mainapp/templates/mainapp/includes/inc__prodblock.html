@@ -1,0 +1,13 @@
+{% include 'mainapp/includes/inc__submenu.html' %}
+
+<div class="grid-3" style="margin: 0 0 70px">
+    {% for item in products %}
+        <div class="prodblock-3">
+            <img src="/media/{{ item.image }}" alt="{{ item.name }}" class="prodblock-3-img">
+
+            <div class="prodblock-3-info">
+                <a href="{% url 'basket:add' item.pk %}" class="button-tiny">&#10095;</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,25 @@
+.submenu {
+    display: flex;
+    width: $size-content;
+    padding: 50px 0;
+
+    &-link {
+        display: flex;
+        margin: 0 0 3px 0;
+        padding: 10px 18px;
+        @include bold-18;
+        color: $color-implicit;
+        text-transform: uppercase;
+        transition: $time-hover;
+
+        &:hover {
+            color: $color-explicit;
+        }
+
+        &[activ='true'] {
+            margin: 0;
+            border-bottom: 3px solid $color-explicit;
+            color: $color-explicit;
+        }
+    }
+}
