@@ -1,0 +1,105 @@
+.basket {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 98px;
+
+    &-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 444px;
+        height: 50px;
+        margin: 0 0 40px;
+
+        &-name {
+            display: flex;
+            flex-direction: column;
+            margin: 0 10px 0 0;
+
+            &-category {
+                @include light-14;
+                text-transform: capitalize;
+                color: $color-explicit;
+            }
+
+            &-product {
+                @include bold-16;
+                text-transform: capitalize;
+                color: $color-explicit;
+            }
+        }
+
+        &-operation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            &-priceone {
+                display: flex;
+                justify-content: flex-end;
+                width: 80px;
+                @include bold-16;
+                color: $color-implicit;
+            }
+    
+            &-quantity {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 30px;
+                margin: 0 20px;
+    
+                &-total {
+                    @include bold-16;
+                    color: $color-implicit;
+                    user-select: none;
+    
+                    &-sign {
+                        @include bold-16;
+                        color: $color-implicit;
+                        transition: $time-hover;
+    
+                        &:hover {
+                            color: $color-explicit;
+                        }
+                    }
+                }
+            }
+    
+            &-priceall {
+                display: flex;
+                justify-content: flex-start;
+                width: 100px;
+                @include bold-16;
+                color: $color-alternative;
+            }
+    
+            &-remove {
+                margin: 0 0 0 20px;
+                @include bold-18;
+                color: $color-explicit;
+                transition: $time-hover;
+    
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    &-total {
+        display: flex;
+        justify-content: flex-end;
+        margin: 20px 0;
+        @include bold-16;
+        text-transform: capitalize;
+        color: $color-implicit;
+
+        &>span {
+            margin: 0 0 0 20px;
+            @include bold-16;
+            color: $color-alternative;
+        }
+    }
+}

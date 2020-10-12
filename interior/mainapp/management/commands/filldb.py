@@ -33,4 +33,7 @@ class Command(BaseCommand):
         for item in locations:
             Contact.objects.create(**item)
 
-    ShopUser.objects.create_superuser(username='django', email='info@interior.com', password='geekbrains', avatar='img_users/admin.jpg')
+        users = load_json('db_users')
+        ShopUser.objects.all().delete()
+        for item in users:
+            ShopUser.objects.create(**item)

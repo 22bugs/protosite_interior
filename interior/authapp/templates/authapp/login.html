@@ -5,8 +5,12 @@
     <form class="userform-formblock" action="{% url 'auth:login' %}" method="POST">
         {% csrf_token %} {% comment %} защита от кросс-сайтовых запросов при использовании POST {% endcomment %}
 
+        {% if next %}
+            <input type="hidden" name="next" value="{{ next }}">
+        {% endif %}
+
         {{ login_form.as_p }} {% comment %} выводит поля: как параграфы (as_p), как список (as_ul), как таблицу (as_table) {% endcomment %}
 
-        <input class="button" type="submit" value="{{ page_name }} &#10095;">
+        <input class="button-big" type="submit" value="{{ page_name }} &#10095;">
     </form>
 {% endblock %}

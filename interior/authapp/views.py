@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponseRedirect
-
 from django.contrib import auth
+
 from authapp.models import ShopUser
 from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditForm
 
@@ -12,6 +12,8 @@ from authapp.forms import ShopUserLoginForm, ShopUserRegisterForm, ShopUserEditF
 def login(request):
     login_form = ShopUserLoginForm(data=request.POST)
 
+    next = request.GET['next'] if 'next' in request.GET.keys() else '' # получает значение страницы, с которой был перенаправлен пользователь
+
     if request.method == 'POST' and login_form.is_valid():
         username = request.POST['username']
         password = request.POST['password']
@@ -19,13 +21,18 @@ def login(request):
         user = auth.authenticate(username=username, password=password) # проверка наличия пользователя в базе
         if user and user.is_active: # если юзер существует и он активен
             auth.login(request, user)
-            return HttpResponseRedirect(reverse('main:index'))
+            if 'next' in request.POST.keys():
+                return HttpResponseRedirect(request.POST['next'])
+            else:
+                return HttpResponseRedirect(reverse('main:index'))
     
-    context = {
+    content = {
         'page_name': 'login',
         'login_form': login_form,
+
+        'next': next,
     }
-    return render(request, 'authapp/login.html', context)
+    return render(request, 'authapp/login.html', content)
 
 
 def logout(request):
@@ -43,11 +50,11 @@ def register(request):
     else:
         register_form = ShopUserRegisterForm()
 
-    context = {
+    content = {
         'page_name': 'register',
         'register_form': register_form,
     }
-    return render(request, 'authapp/register.html', context)
+    return render(request, 'authapp/register.html', content)
 
 
 def edit(request):
@@ -60,8 +67,8 @@ def edit(request):
     else:
         edit_form = ShopUserEditForm(instance=request.user)
 
-    context = {
+    content = {
         'page_name': 'edit user',
         'edit_form': edit_form,
     }
-    return render(request, 'authapp/edit.html', context)
+    return render(request, 'authapp/edit.html', content)

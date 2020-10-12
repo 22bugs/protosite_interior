@@ -4,6 +4,7 @@ from django.conf import settings
 from django.shortcuts import render, get_object_or_404
 
 from mainapp.models import *
+from authapp.models import *
 from basketapp.models import *
 
 
@@ -14,22 +15,29 @@ with open(os.path.join(settings.JSON_MAIN, 'navigation.json'), 'r', encoding='ut
 # Create your views here.
 
 def index(request):
-    bask_set = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
-
-    context = {
+    content = {
         'page_name': 'home',
 
         'navigation': load_nav['menu'],
         'usefull': load_nav['usefull'],
         'socials': load_nav['socials'],
-        'basket': bask_set,
     }
-    return render(request, 'mainapp/index.html', context)
+
+    if request.user.is_authenticated:
+        user_ava = ShopUser.objects.get(username=request.user).avatar
+        bask_set = Basket.objects.filter(user=request.user)
+    
+        authenticated ={
+            'avatar': user_ava,
+            'basket': bask_set,
+        }
+
+        content.update(authenticated)
+
+    return render(request, 'mainapp/index.html', content)
 
 
 def products(request, pk=None):
-    bask_set = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
-
     cats_set = ProductCategory.objects.all()
 
     if pk is not None:
@@ -38,7 +46,7 @@ def products(request, pk=None):
     else:
         prod_set = Product.objects.all().order_by('name')[:12]
 
-    context = {
+    content = {
         'page_name': 'products',
         'head_name': 'our products range',
 
@@ -47,17 +55,26 @@ def products(request, pk=None):
         'socials': load_nav['socials'],
         'categories': cats_set,
         'products': prod_set,
-        'basket': bask_set,
     }
-    return render(request, 'mainapp/products.html', context)
+
+    if request.user.is_authenticated:
+        user_ava = ShopUser.objects.get(username=request.user).avatar
+        bask_set = Basket.objects.filter(user=request.user)
+    
+        authenticated ={
+            'avatar': user_ava,
+            'basket': bask_set,
+        }
+
+        content.update(authenticated)
+
+    return render(request, 'mainapp/products.html', content)
 
 
 def contact(request):
-    bask_set = sum(list(Basket.objects.filter(user=request.user).values_list('quantity', flat=True)))
-
     cont_set = Contact.objects.all()
 
-    context = {
+    content = {
         'page_name': 'contact',
         'head_name': 'contact us',
 
@@ -65,6 +82,17 @@ def contact(request):
         'usefull': load_nav['usefull'],
         'socials': load_nav['socials'],
         'locations': cont_set,
-        'basket': bask_set,
     }
-    return render(request, 'mainapp/contact.html', context)
+
+    if request.user.is_authenticated:
+        user_ava = ShopUser.objects.get(username=request.user).avatar
+        bask_set = Basket.objects.filter(user=request.user)
+    
+        authenticated ={
+            'avatar': user_ava,
+            'basket': bask_set,
+        }
+
+        content.update(authenticated)
+
+    return render(request, 'mainapp/contact.html', content)

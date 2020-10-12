@@ -1,0 +1,29 @@
+{% extends 'basketapp/base.html' %}
+
+{% block main %}
+    <div class="basket">
+        {% for item in basket %}
+            <div class="basket-item">
+                <div class="basket-item-name">
+                    <span class="basket-item-name-category">{{ item.product.category.name }}</span>
+                    <span class="basket-item-name-product">{{ item.product.name }}</span>
+                </div>
+                <div class="basket-item-operation">
+                    <div class="basket-item-operation-priceone">{{ item.product.price }}</div>
+                    <div class="basket-item-operation-quantity">
+                        <a href="" class="basket-item-operation-quantity-total-sign">&#43;</a>
+                        <div class="basket-item-operation-quantity-total">{{ item.quantity }}</div>
+                        <a href="" class="basket-item-operation-quantity-total-sign">&#8722;</a>
+                    </div>
+                    <div class="basket-item-operation-priceall">{{ item.product_cost }}</div>
+                    <a href="{% url 'basket:remove' item.pk %}" class="basket-item-operation-remove">&#128939;</a>
+                </div>
+            </div>
+        {% endfor %}
+        {% if basket %}
+            <div class="basket-total">
+                total:<span>{{ basket.0.total_cost }}</span>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

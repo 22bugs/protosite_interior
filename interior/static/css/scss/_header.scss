@@ -52,6 +52,23 @@
                 height: 28px;
                 margin: 0 15px;
                 fill: $color-explicit;
+
+                #bascount {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 14px;
+                    height: 14px;
+                    margin: 0 0 0 19px;
+                    border-radius: 7px;
+                    font: {
+                        family: montserrat_bold;
+                        size: 10px;
+                    }
+                    color: white;
+                    background: red;
+                }
     
                 &:hover {
                     animation: swing $time-hover;

@@ -140,3 +140,8 @@ JSON_MAIN = os.path.join(BASE_DIR, 'mainapp/json')
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# Path to login
+
+LOGIN_URL = '/auth/login/'

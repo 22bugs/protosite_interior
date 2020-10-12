@@ -8,6 +8,7 @@
 @import "_location-3";
 @import "_userform";
 @import "_footer";
+@import "_basket";
 
 * {
     margin: 0;
@@ -37,7 +38,7 @@ a {
     width: calc($size-content + 30px);
 }
 
-.button {
+.button-big {
     position: relative;
     height: 46px;
     margin: 0 0 2px 0;
@@ -63,6 +64,39 @@ a {
     &:active {
         outline: none;
     }
+}
+
+.button-tiny {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    margin: 0 0 2px 0;
+    border-radius: 24px;
+    box-shadow: 0 2px 5px 0 $color-neutral;
+    @include bold-18;
+    color: $color-explicit;
+    background: white;
+    transition: all $time-hover ease;
+
+    &:hover {
+        margin: 2px 0 0 0;
+        box-shadow: none;
+        background: $color-alternative;
+    }
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+}
+
+.button-pic {
+    width: 28px;
+    height: 28px;
+    border-radius: 100px;
 }
 
 @font-face {
